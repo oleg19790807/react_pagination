@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import './App.css';
 import { getNumbers } from './utils';
@@ -29,8 +28,9 @@ export const App: React.FC = () => {
       <h1>Items with Pagination</h1>
 
       <p className="lead" data-cy="info">
-        // eslint-disable-next-line prettier/prettier Page {currentPage} (items{' '}
-        {startIndex + 1} - {endIndex} of {items.length})
+        Page {currentPage} (
+          items {startIndex + 1} - {endIndex} of {items.length}
+          )
       </p>
 
       <div className="form-group row">
@@ -63,9 +63,7 @@ export const App: React.FC = () => {
 
       <ul>
         {currentItems.map((item, index) => (
-          <li key={index} data-cy="item">
-            {item}
-          </li>
+          <li key={index} data-cy="item">{item}</li>
         ))}
       </ul>
     </div>
